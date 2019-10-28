@@ -20,7 +20,7 @@ public class Main {
 		if(right < n && ar[right] > ar[largest])
 			largest = right;
 		
-		//Se alla fine dell'algoritmo non l'indice del valore maggiore non corrisponde con l'indice della root
+		//Se alla fine dell'algoritmo l'indice del valore maggiore non corrisponde con l'indice della root
 		//Si aggiorna l'heap e ricorsivamente lo si rimanda al processo di heapify
 		if(largest != i) {
 			int app = ar[i];
@@ -50,10 +50,10 @@ public class Main {
 	}
 	
 	public static void main(String[] args) {
-//		Main main = new Main();
-//		int ar[] = {3,6,19,4,5,0,8,2};
-//		main.sort(ar);
-//		System.out.print(Arrays.toString(ar));
+		Main main = new Main();
+		int ar[] = {3,6,19,4,5,0,8,2};
+		main.sort(ar);
+		System.out.print(Arrays.toString(ar));
 	}
 
 }
