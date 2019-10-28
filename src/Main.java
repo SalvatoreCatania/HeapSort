@@ -5,14 +5,14 @@ public class Main {
 	//ar[] sotto-vettore da ordinare
 	//n lunghezza sottovettore
 	//i Indice root
-	public void heapify(int ar[], int n, int i) {
-		//1° step identificare attori processo algoritmo
+	public static void heapify(int ar[], int n, int i) {
+		//1Â° step identificare attori processo algoritmo
 		int largest = i;
 		int left = i*2 + 1;
 		int right = i*2 + 2;
 		
-		//2° step verificare che left e right siano effettivamente minori di root (minori perchè stiamo realizzando un Max-Heap)
-		//Verifichiamo prima che il figlio sinistro sia effettivamente più piccolo del suo parent
+		//2Â° step verificare che left e right siano effettivamente minori di root (minori perchï¿½ stiamo realizzando un Max-Heap)
+		//Verifichiamo prima che il figlio sinistro sia effettivamente piï¿½ piccolo del suo parent
 		//altrimenti modifichiamo l'indice
 		if(left < n && ar[left] > ar[largest])
 			largest = left;
@@ -31,7 +31,7 @@ public class Main {
 		}
 	}
 	
-	public void sort(int ar[]) {
+	public static void sort(int ar[]) {
 		int n = ar.length;
 		
 		//Costruisco l'albero o heap
@@ -50,9 +50,8 @@ public class Main {
 	}
 	
 	public static void main(String[] args) {
-		Main main = new Main();
 		int ar[] = {3,6,19,4,5,0,8,2};
-		main.sort(ar);
+		sort(ar);
 		System.out.print(Arrays.toString(ar));
 	}
 
